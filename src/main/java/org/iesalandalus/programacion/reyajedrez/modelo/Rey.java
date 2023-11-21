@@ -11,6 +11,17 @@ public class Rey {
         posicion = new Posicion(1,'e');
     }
 
+    public Rey(Color color){
+        If(color==Color.BLANCO){
+            posicion.setFila(1);
+            posicion.setColumna('e');
+        }
+        else{
+            posicion.setFila(8);
+            posicion.setColumna('e');
+        }
+    }
+
 
 
     public Posicion getPosicion() {
