@@ -45,6 +45,15 @@ public class Rey {
     public int getTotalMovimientos() {
         return totalMovimientos;
     }
+
+    @Override
+    public String toString() {
+        return "Rey{" +
+                "posicion=" + posicion +
+                ", color=" + color +
+                '}';
+    }
+
     public void mover (Direccion direccion) throws OperationNotSupportedException {
         if (direccion==null){
             throw new NullPointerException("El valor de la dirección no puede ser nulo");
