@@ -35,22 +35,22 @@ public class Consola{
         return opcion;
     }
 
-    private static int elegirColor(){
-        int opcion=0;
-        do
-        {
+    private static Color elegirColor() {
+        int opcion = 0;
+        do {
             System.out.println("Elige un color:");
             System.out.println("1-Blanco");
             System.out.println("2-Negro");
-            opcion=Entrada.entero();
-        }while(opcion<0 || opcion>3);
+            opcion = Entrada.entero();
+        } while (opcion < 0 || opcion > 3);
 
-        if (opcion==1){
-            Rey rey=new Rey(Color.BLANCO);}
-        if (opcion==2){
-            Rey rey=new Rey(Color.NEGRO);}
-
-        return opcion;
+        if (opcion == 1) {
+            Rey rey = new Rey(Color.BLANCO);
+            return Color.BLANCO;
+        } else{
+            Rey rey = new Rey(Color.NEGRO);
+            return Color.NEGRO;
+        }
 
     }
 
