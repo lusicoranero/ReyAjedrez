@@ -54,6 +54,28 @@ public class Consola{
 
     }
 
+    private static int mostrarMenuDirecciones(){
+        System.out.println("Elija una dirección:");
+        System.out.println("1.- NORTE");
+        System.out.println("2.- NORESTE");
+        System.out.println("3.- ESTE.");
+        System.out.println("4.- SURESTE");
+        System.out.println("5.- SUR");
+        System.out.println("6.- SUROESTE");
+        System.out.println("7.- OESTE");
+        System.out.println("8.- NOROESTE");
+
+        int opcion=0;
+
+        do
+        {
+            System.out.println("Elige una opción (1-8): ");
+            opcion=Entrada.entero();
+        }while(opcion<1 || opcion>8);
+
+      return opcion;
+
+    }
 
 
 
