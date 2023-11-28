@@ -4,8 +4,6 @@ import org.iesalandalus.programacion.reyajedrez.modelo.Direccion;
 import org.iesalandalus.programacion.reyajedrez.modelo.Rey;
 import utilidades.Entrada;
 
-import javax.swing.*;
-
 public class Consola{
 
     private static final Consola consola = new Consola();
@@ -14,7 +12,7 @@ public class Consola{
 
     }
 
-    private  static void mostrarMenu()
+    public  static void mostrarMenu()
     {
         System.out.println("Tarea 3");
         System.out.println("Elija una opción:");
@@ -23,10 +21,8 @@ public class Consola{
         System.out.println("3.- Mover.");
         System.out.println("0.- Salir");
     }
-    private static int elegirOpcionMenu()
+    public static int elegirOpcionMenu(int opcion)
     {
-        int opcion;
-
         do
         {
             System.out.println("Elige una opción (0-3): ");
@@ -36,7 +32,7 @@ public class Consola{
         return opcion;
     }
 
-    private static Color elegirColor() {
+    public static Color elegirColor() {
         int opcion = 0;
         do {
             System.out.println("Elige un color:");
@@ -55,7 +51,7 @@ public class Consola{
 
     }
 
-    private static void mostrarMenuDirecciones() {
+    public static void mostrarMenuDirecciones() {
         System.out.println("Elija una dirección:");
         System.out.println("1.- NORTE");
         System.out.println("2.- NORESTE");
@@ -67,7 +63,7 @@ public class Consola{
         System.out.println("8.- NOROESTE");
     }
 
-    private static Direccion elegirDireccion(){
+    public static Direccion elegirDireccion(){
         int opcion=0;
         Direccion direccion = null;
 
@@ -104,7 +100,7 @@ public class Consola{
 
     }
 
-    private static void despedirse(){
+    public static void despedirse(){
 
         System.out.println("Espero lo hayas pasado bien. Hasta pronto.");
     }
