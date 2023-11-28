@@ -1,5 +1,9 @@
 package org.iesalandalus.programacion.reyajedrez;
+import org.iesalandalus.programacion.reyajedrez.modelo.Color;
+import org.iesalandalus.programacion.reyajedrez.modelo.Rey;
 import utilidades.Entrada;
+
+import javax.swing.*;
 
 public class Consola{
 
@@ -18,7 +22,7 @@ public class Consola{
         System.out.println("3.- Mover.");
         System.out.println("0.- Salir");
     }
-    private static int elegirOpcion()
+    private static int elegirOpcionMenu()
     {
         int opcion;
 
@@ -29,6 +33,25 @@ public class Consola{
         }while(opcion<0 || opcion>3);
 
         return opcion;
+    }
+
+    private static int elegirColor(){
+        int opcion=0;
+        do
+        {
+            System.out.println("Elige un color:");
+            System.out.println("1-Blanco");
+            System.out.println("2-Negro");
+            opcion=Entrada.entero();
+        }while(opcion<0 || opcion>3);
+
+        if (opcion==1){
+            Rey rey=new Rey(Color.BLANCO);}
+        if (opcion==2){
+            Rey rey=new Rey(Color.NEGRO);}
+
+        return opcion;
+
     }
 
 
