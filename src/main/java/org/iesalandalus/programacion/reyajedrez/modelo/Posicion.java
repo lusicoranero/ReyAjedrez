@@ -8,18 +8,14 @@ public class Posicion {
     private char columna;
 
     public Posicion(int fila, char columna) {
-        if (fila < 1) {
-            throw new IllegalArgumentException("El valor de la fila no puede ser inferior a 1.");
-        } else if (fila > 8) {
-            throw new IllegalArgumentException("El valor de la fila no puede ser mayor que 8.");
-        }
-        this.fila = fila;
-        if (columna <'a') {
-            throw new IllegalArgumentException("El valor de la columna no puede ser inferior a a.");
-        } else if (columna >'h') {
-            throw new IllegalArgumentException("El valor de la fila no puede ser mayor que h.");
-        }
-        this.columna = columna;
+        if ((fila < 1)||(fila>8)) {
+            throw new IllegalArgumentException("Fila no válida");}
+            this.fila = fila;
+
+        if (columna !='a'&& columna !='b'&& columna !='c'&& columna !='d'&& columna !='e'&& columna !='f'&& columna !='g'&& columna !='h') {
+            throw new IllegalArgumentException("Columna no válida");}
+            this.columna = columna;
+
     }
 
     public Posicion(Posicion posicion) {
@@ -32,11 +28,8 @@ public class Posicion {
     }
 
     public void setFila(int fila) {
-        if (fila < 1) {
-            throw new IllegalArgumentException("El valor de la fila no puede ser inferior a 1.");
-        } else if (fila > 8) {
-            throw new IllegalArgumentException("El valor de la fila no puede ser mayor que 8.");
-        }
+        if ((fila < 1)||(fila>8)) {
+            throw new IllegalArgumentException("Fila no válida");}
         this.fila = fila;
     }
 
@@ -45,13 +38,10 @@ public class Posicion {
     }
 
     public void setColumna(char columna) {
-        if (columna <'a') {
-            throw new IllegalArgumentException("El valor de la columna no puede ser inferior a a.");
-        } else if (columna >'h') {
-            throw new IllegalArgumentException("El valor de la fila no puede ser mayor que h.");
+        if (columna !='a'&& columna !='b'&& columna !='c'&& columna !='d'&& columna !='e'&& columna !='f'&& columna !='g'&& columna !='h') {
+            throw new IllegalArgumentException("Columna no válida");
         }
         this.columna = columna;
-
     }
 
     @Override
@@ -69,9 +59,6 @@ public class Posicion {
 
     @Override
     public String toString() {
-        return "Posicion{" +
-                "Fila=" + fila +
-                ", Columna=" + columna +
-                '}';
+        return "fila=" + fila +", columna=" + columna ;
     }
 }
