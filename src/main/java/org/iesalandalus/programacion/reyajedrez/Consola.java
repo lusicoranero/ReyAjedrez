@@ -1,4 +1,5 @@
 package org.iesalandalus.programacion.reyajedrez;
+import utilidades.Entrada;
 
 public class Consola{
 
@@ -16,6 +17,18 @@ public class Consola{
         System.out.println("2.- Crear un rey eligiendo el color.");
         System.out.println("3.- Mover.");
         System.out.println("0.- Salir");
+    }
+    private static int elegirOpcion()
+    {
+        int opcion;
+
+        do
+        {
+            System.out.println("Elige una opción (0-3): ");
+            opcion=Entrada.entero();
+        }while(opcion<0 || opcion>3);
+
+        return opcion;
     }
 
 
