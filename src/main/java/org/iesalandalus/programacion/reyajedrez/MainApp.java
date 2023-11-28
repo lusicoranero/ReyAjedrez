@@ -27,4 +27,8 @@ public class MainApp {
         mover(direccion);
 
     }
+
+    private static void mostrarRey(Rey rey){
+        rey.toString();
+    }
 }
