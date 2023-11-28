@@ -8,10 +8,20 @@ import static org.iesalandalus.programacion.reyajedrez.Consola.*;
 
 public class MainApp {
     public static void main(String[] args) {
+        int opcion = 0;
+        mostrarMenu();
 
+        do{
+            opcion = elegirOpcionMenu(opcion);
+        }while(opcion!=0);
+
+        despedirse();
 
 
     }
+
+
+
     private static void ejecutarOpcion(int opcion){
     elegirOpcionMenu(opcion);
     }
@@ -31,4 +41,7 @@ public class MainApp {
     private static void mostrarRey(Rey rey){
         rey.toString();
     }
+
+
+
 }
