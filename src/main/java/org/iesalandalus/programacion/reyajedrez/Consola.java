@@ -104,9 +104,10 @@ public class Consola{
 
     }
 
+    private static void despedirse(){
 
-
-
+        System.out.println("Espero lo hayas pasado bien. Hasta pronto.");
+    }
 
 
 
